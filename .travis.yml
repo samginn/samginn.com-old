@@ -1,3 +1,7 @@
+language: node_js
+node_js:
+  - "5"
+
 deploy:
   provider: gcs
   access_key_id: 73d71edae0ba4ad0fc0a26f7b81f01c9dba7c997
