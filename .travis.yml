@@ -1,10 +1,5 @@
 sudo: false
-language: node_js
-node_js:
-  - "5"
-
-install:
-  - "echo 'hello world!'"
+language: generic
 
 deploy:
   provider: gcs
