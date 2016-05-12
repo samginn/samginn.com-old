@@ -1,0 +1,13 @@
+machine:
+  environment:
+    CLOUDSDK_CORE_DISABLE_PROMPTS: 1
+    GCLOUD_ZONE: us-central1-b
+    GCLOUD_PROJECT: g-readsf
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - sudo /opt/google-cloud-sdk/bin/gcloud config set project $GCLOUD_PROJECT
+      - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
+      - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
