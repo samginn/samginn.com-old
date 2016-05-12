@@ -15,5 +15,5 @@ deployment:
   master:
     branch: master
     commands:
-      - sudo /opt/google-cloud-sdk/bin/gcloud set project $GCLOUD_PROJECTID
-      - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files . hydrogen:~/var/www/samginn.com/public
+      - sudo /opt/google-cloud-sdk/bin/gcloud config set project $GCLOUD_PROJECTID
+      - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files src/ hydrogen:~/var/www/samginn.com/public
