@@ -14,7 +14,7 @@ deployment:
     commands:
       - echo $GCLOUD_SERVICE_KEY | base64 --decode > ${HOME}/gcloud-service-key.json
       - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
-      - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
-      - ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
+      - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account $GCLOUD_EMAIL --key-file ${HOME}/gcloud-service-key.json
+      - ssh-keygen -f ~/.ssh/google_compute_engine -N ""
       - sudo /opt/google-cloud-sdk/bin/gcloud config set project $GCLOUD_PROJECTID
       - sudo /opt/google-cloud-sdk/bin/gcloud compute copy-files src/ $GCLOUD_INSTANCE_NAME:/var/www/samginn.com/public --zone $CLOUDSDK_COMPUTE_ZONE
