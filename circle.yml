@@ -1,0 +1,17 @@
+machine:
+  environment:
+    CLOUDSDK_CORE_DISABLE_PROMPTS: 1
+    CLOUDSDK_COMPUTE_ZONE: us-central1-b
+    CLOUDSDK_CORE_PROJECT: $GCLOUD_PROJECTID
+
+dependencies:
+  cache_directories:
+    - ~/google-cloud-sdk
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - echo $GCLOUD_SERVICE_KEY | base64 --decode > ${HOME}/gcloud-service-key.json
+      - sudo /opt/google-cloud-sdk/bin/gcloud --quiet components update
+      - sudo /opt/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file ${HOME}/gcloud-service-key.json
