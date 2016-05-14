@@ -13,8 +13,9 @@ dependencies:
     - sudo /opt/google-cloud-sdk/bin/gcloud config set project $PROJECT_NAME
     - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
 
-  cache_directories:
-    - ~/google-cloud-sdk
+test:
+  override:
+    - echo "Loaded site fine."
 
 deployment:
   master:
