@@ -1,0 +1,15 @@
+<% wrap_layout :layout do %>
+  <div class="container">
+    <article>
+      <h1><%= current_page.data.title || "Sam Ginn" %></h1>
+      <% if current_page.data.published %>
+        <p class="small">Written <%= current_page.data.published %></p>
+      <% end %>
+      <%= yield %>
+    </article>
+    <hr>
+    <p class="small">Many wonderful, lifetime-long conversations have emerged from the simplest of introductions. I would love to hear from you.</p>
+    <p class="small">Please never hesitate to reach out by emailing me at <%= link_to "sam@samginn.com", "mailto:sam@samginn.com" %>. If you need to send me a confidential email, <%= link_to "go here", "/secure-email.html" %> to reveal my public PGP key.</p>
+    <p class="small">Otherwise, <%= link_to "click here to go back my homepage", "/" %>.</p>
+  </div>
+<% end %>

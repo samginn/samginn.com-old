@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import "normalize";
+
+html, body {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: "Lusitana", "Cochin", "Baskerville", "Georgia", serif;
+  font-size: 62.5%; /* To base everything on 10px */
+  color: rgb(62, 62, 62);
+  background-color: rgb(248, 248, 242);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  max-width: 600px;
+  text-align: justify;
+
+  &.small {
+    font-size: 1.6rem;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 10%;
+  box-sizing: border-box;
+
+  & hr {
+    width: 600px;
+    margin-left: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: rgb(58, 119, 190);
+  border-bottom: 1px solid rgba(58, 119, 190, 0.2);
+  transition: 0.25s ease border-bottom-color;
+}
+
+a:hover {
+  border-color: rgba(58, 119, 190, 1);
+}
+
+pre {
+  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+  font-size: 1.8rem;
+}
