@@ -7,7 +7,7 @@ html, body {
   font-family: "Lusitana", "Cochin", "Baskerville", "Georgia", serif;
   font-size: 62.5%; /* To base everything on 10px */
   color: rgb(62, 62, 62);
-  background-color: rgb(248, 248, 242);
+  background-color: rgb(248, 246, 242);
 }
 
 h1 {
@@ -32,9 +32,15 @@ p {
   font-size: 1.8rem;
 
   & hr {
-    width: 600px;
+    max-width: 600px;
     margin-left: 0;
     border-color: rgba(62, 62, 62, 0.2);
+  }
+}
+
+@media(max-width: 500px) {
+  .container {
+    margin-top: 60px;
   }
 }
 
