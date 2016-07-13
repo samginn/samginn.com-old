@@ -8,4 +8,4 @@ My name is Sam Ginn. I was born in Oak Park, Illinois&mdash;a suburb of Chicago 
 
 You can find some of my code and projects at [github.com/samginn](https://github.com/samginn).
 
-Any more information would rob me of the chance to talk with you directly.
+Any more self-indulgence would rob me of the chance to talk with you directly.
