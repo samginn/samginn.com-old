@@ -53,3 +53,26 @@ pre {
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
   font-size: 1.8rem;
 }
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 3rem;
+  border: 1px solid rgba(62, 62, 62, 0.2);
+  color: rgba(62, 62, 62, 0.75);
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s ease color,
+              0.25s ease border-color;
+
+  &:hover {
+    color: rgb(62, 62, 62);
+    border-color: rgb(62, 62, 62);
+    cursor: pointer;
+  }
+}
