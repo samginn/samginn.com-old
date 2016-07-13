@@ -11,6 +11,12 @@ page '/*.txt', layout: false
 
 # General configuration
 set :relative_links, true
+activate :directory_indexes
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :footnotes => true, :with_toc_data => true
+
+activate :syntax
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -28,6 +34,4 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
-
-  config[:relative_links] = true
 end
