@@ -58,6 +58,8 @@ a:hover {
 pre {
   font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
   font-size: 1.8rem;
+  max-width: 100%;
+  overflow-x: scroll;
 }
 
 .back-button {
