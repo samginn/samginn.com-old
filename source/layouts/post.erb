@@ -1,6 +1,9 @@
 <% wrap_layout :layout do %>
   <a class="back-button" href="/">
-    &larr;
+    <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+    </svg>
   </a>
   <div class="container">
     <article>
@@ -11,7 +14,7 @@
       <%= yield %>
     </article>
     <hr>
-    <p class="small">Many wonderful, lifetime-long conversations have emerged from the simplest of introductions. I would love to hear from you.</p>
+    <p class="small">Many wonderful, lifetime-long conversations have emerged from the simplest of introductions: I would love to hear from you.</p>
     <p class="small">Please never hesitate to reach out by emailing me at <%= link_to "sam@samginn.com", "mailto:sam@samginn.com" %>. If you need to send me a confidential email, <%= link_to "go here", "/secure-email.html" %> to reveal my public PGP key.</p>
     <p class="small">Otherwise, <%= link_to "click here to go back my homepage", "/" %>.</p>
   </div>

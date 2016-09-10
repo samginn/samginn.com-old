@@ -7,7 +7,7 @@ html, body {
   font-family: "Lusitana", "Cochin", "Baskerville", "Georgia", serif;
   font-size: 62.5%; /* To base everything on 10px */
   color: rgb(62, 62, 62);
-  background-color: rgb(248, 246, 242);
+  background-color: rgb(255, 255, 255);
 }
 
 h1 {
@@ -64,23 +64,30 @@ pre {
 
 .back-button {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 3rem;
-  border: 1px solid rgba(62, 62, 62, 0.2);
-  color: rgba(62, 62, 62, 0.75);
-  border-radius: 50%;
-  height: 36px;
-  width: 36px;
+  top: 0;
+  left: 0;
+  color: rgb(255, 255, 255);
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: 0.25s ease color,
-              0.25s ease border-color;
+  border-bottom: none;
+  padding: 5px;
+  height: 24px;
+  width: 24px;
+}
 
-  &:hover {
-    color: rgb(62, 62, 62);
-    border-color: rgb(62, 62, 62);
-    cursor: pointer;
-  }
+.back-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+	width: 0;
+	height: 0;
+	border-right: 60px solid transparent;
+	border-top: 60px solid rgba(58, 119, 190, 0.8);
+  z-index: -1;
+  transition: border-top-color 0.2s ease;
+}
+
+.back-button:hover:after {
+  border-top-color: rgba(58, 119, 190, 1);
 }
